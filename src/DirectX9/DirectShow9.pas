@@ -1954,11 +1954,11 @@ type
   tagCameraControlFlags = (
   {$IFNDEF COMPILER6_UP}
     CameraControl_Flags_INVALID_0,
-    CameraControl_Flags_Manual,
-    CameraControl_Flags_Auto
+    CameraControl_Flags_Auto,
+    CameraControl_Flags_Manual
   {$ELSE}
-    CameraControl_Flags_Manual = 1,
-    CameraControl_Flags_Auto
+    CameraControl_Flags_Auto = 1,
+    CameraControl_Flags_Manual = 2
   {$ENDIF}
   );
   {$EXTERNALSYM tagCameraControlFlags}

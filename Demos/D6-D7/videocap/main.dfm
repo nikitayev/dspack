@@ -1,9 +1,9 @@
 object MainForm: TMainForm
   Left = 192
   Top = 114
+  Width = 720
+  Height = 530
   Caption = 'Video Cap'
-  ClientHeight = 503
-  ClientWidth = 696
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -92,7 +92,7 @@ object MainForm: TMainForm
   object StatusBar: TStatusBar
     Left = 0
     Top = 484
-    Width = 696
+    Width = 712
     Height = 19
     Panels = <>
     SimplePanel = True
@@ -138,6 +138,7 @@ object MainForm: TMainForm
     Width = 153
     Height = 21
     Style = csDropDownList
+    ItemHeight = 13
     TabOrder = 9
   end
   object CaptureGraph: TFilterGraph

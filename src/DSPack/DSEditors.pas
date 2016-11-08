@@ -35,7 +35,7 @@ interface
 uses
 
 {$IFDEF COMPILER6_UP} DesignIntf, DesignEditors, {$ELSE} DsgnIntf, {$ENDIF}
- Forms, Controls, DXSUtil, DSPack;
+ SysUtils, Forms, Controls, DXSUtil, DSPack;
 
 type
 
@@ -123,8 +123,13 @@ uses MediaTypeEditor, BaseFilterEditor, Classes;
 
   procedure Register;
   begin
-    RegisterComponents('DSPack', [TFilterGraph, TVideoWindow, TSampleGrabber,
-      TFilter, TASFWriter, TDSTrackBar, TDSVideoWindowEx2]);  
+    RegisterComponents('DSPack', [TFilterGraph]);
+    RegisterComponents('DSPack', [TVideoWindow]);
+    RegisterComponents('DSPack', [TFilter]);
+    RegisterComponents('DSPack', [TASFWriter]);
+    RegisterComponents('DSPack', [TDSTrackBar]);
+    RegisterComponents('DSPack', [TDSVideoWindowEx2]);
+    RegisterComponents('DSPack', [TSampleGrabber]);
     RegisterPropertyEditor(TypeInfo(TMediaType), nil, '', TMediaTypePropertyClass);
     RegisterPropertyEditor(TypeInfo(TBaseFilter), nil, '', TBaseFilterPropertyClass);
   end;

@@ -1841,7 +1841,8 @@ const
 
   procedure TFilterGraph.HandleEvents;
   var hr: HRESULT;
-      Event, Param1, Param2: Integer;
+      Event: Integer;
+      Param1, Param2: LONG_PTR;
   begin
     if assigned(FMediaEventEx) then
     begin
